@@ -16,9 +16,9 @@
       line-height: 1.8;
     }
 
-    /* phần ảnh */
+    /* Full height image header */
     .bgimg-1 {
-      background-position: calc(50%) center;
+      background-position: center;
       background-size: cover;
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("image/banner_color.webp");
       min-height: 100%;
@@ -34,14 +34,14 @@
 <!-- thanh điều hướng -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">Doko Doki Literature Club</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide">
+      <img src="image/icon.webp" alt="Doki Doki Literature Club" style="height: 30px;">
+    </a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Developer</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#characters" class="w3-bar-item w3-button"><i class="fa fa-th"></i> CHARACTERS</a>
+      <a href="#dev" class="w3-bar-item w3-button"><i class="fa fa-user"></i> DEVELOPER</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -51,66 +51,223 @@
   </div>
 </div>
 
-<!-- cái thanh ở bên -->
+    
+
+<!-- cái thanh ở bên khi thu nhỏ -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#characters" onclick="w3_close()" class="w3-bar-item w3-button">CHARACTERS</a>
+  <a href="#dev" onclick="w3_close()" class="w3-bar-item w3-button">DEVELOPER</a>
 </nav>
 
 <!-- chữ trên ảnh -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that doesnt matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">TSA như c</span><br>
-    <span class="w3-large">Stop wasting valuable time with TSA<br>11/9 ragebait</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and sleep today</a></p>
+    <span class="w3-jumbo w3-hide-small">Doki Doki Literature Club</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Doki Doki Literature Club</span><br>
+    <span class="w3-large">Visual Novel created by Team Salvato</span>
+    <p><a href="#game" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Try out Today</a></p>
   </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
 </header>
 
 <!-- giới thiệu game -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
+<div class="w3-container" style="
+  padding: 128px 16px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/banner_brown.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+" id="about">
+  <h3 class="w3-center" style="font-size: 2.5em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+    Doki Doki Literature Club!
+  </h3>
+  <p class="w3-center w3-large" style="font-style: italic; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
+    Chào mừng đến với Câu lạc bộ Văn học Doki Doki!
+  </p>
+
+  <div class="w3-row-padding w3-center" style="margin-top: 64px; max-width: 1200px; margin-left: auto; margin-right: auto;">
     <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>1+1=3</p>
+      <i class="fa fa-book w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large" style="font-weight: bold;">Câu lạc bộ Văn học</p>
+      <p>Một nhóm nhỏ chuyên chia sẻ niềm vui viết và đọc thơ tại trường trung học. Nơi những vần thơ kết nối trái tim.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>10+9=21</p>
+      <p class="w3-large" style="font-weight: bold;">Sayori — Cô bạn thời thơ ấu</p>
+      <p>Cô bạn thời thơ ấu sôi nổi đã thuyết phục bạn tham gia Câu lạc bộ Văn học. Nhờ Sayori, một hành trình mới bắt đầu.</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>hello world</p>
+      <i class="fa fa-users w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large" style="font-weight: bold;">Bốn cô gái đáng yêu</p>
+      <p>Là thành viên mới, bạn sẽ tìm hiểu về bốn cô gái cá tính và đáng yêu của câu lạc bộ cùng những câu chuyện riêng.</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>T ghét lm web</p>
+      <i class="fa fa-star w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large" style="font-weight: bold;">Khám phá & Kết nối</p>
+      <p>Dành thời gian với họ, tìm hiểu về tính cách, ước mơ và những bí mật ẩn giấu đằng sau nụ cười mỗi người.</p>
     </div>
   </div>
 </div>
 
+<!-- nhân vật -->
+<div class="w3-container" style="padding:128px 16px" id="characters">
+  <h3 class="w3-center">Nhân vật chính</h3>
 
+  <style>
+    .char-row {
+      display: flex;
+      align-items: center;
+      margin-top: 48px;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .char-row.left {
+      flex-direction: row;
+    }
+    .char-row.right {
+      flex-direction: row-reverse;
+    }
+    .char-card {
+      flex: 0 0 300px;
+      max-width: 300px;
+    }
+    .char-card .w3-card {
+      width: 100%;
+    }
+    .char-card img {
+      width: 100%;
+      display: block;
+    }
+    .char-text {
+      flex: 1 1 300px;
+      min-width: 250px;
+    }
+
+    /* Text luôn căn trái, thêm padding để cách ô nhân vật */
+    .char-row.left .char-text {
+      text-align: left;
+      padding-left: 32px;
+    }
+    .char-row.right .char-text {
+      text-align: left;
+      padding-right: 32px;
+    }
+
+    /* Responsive: on small screens, stack vertically */
+    @media (max-width: 700px) {
+      .char-row.left,
+      .char-row.right {
+        flex-direction: column;
+        align-items: center;
+      }
+      .char-card {
+        flex: 0 0 auto;
+        max-width: 90%;
+      }
+      .char-text {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100%;
+      }
+    }
+  </style>
+
+  <!-- Sayori — card left, text right -->
+  <div class="char-row left">
+    <div class="char-card">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Sayori">
+        <div class="w3-container">
+          <h3>Sayori</h3>
+          <p class="w3-opacity">Vice President</p>
+        </div>
+      </div>
+    </div>
+    <div class="char-text">
+      <h3>Sayori</h3>
+      <p>
+        Phó Chủ tịch Câu lạc bộ Văn học là Sayori, người bạn thời thơ ấu vui vẻ và hoạt bát của nhân vật chính, đồng thời là hàng xóm kế bên . Với mái tóc ngắn màu hồng san hô buộc nơ đỏ lớn và tính cách tràn đầy năng lượng, cô ấy là hình mẫu của một cô gái năng động, hoạt bát, người đã nhiệt tình tuyển mộ nhân vật chính tham gia câu lạc bộ với hy vọng chia sẻ niềm vui sáng tác. Cô được biết đến với sự vụng về, tình yêu đồ ngọt, và một chút lười biếng thường khiến cô ngủ quên và để phòng bừa bộn.
+      </p>
+    </div>
+  </div>
+
+  <!-- Yuri — card right, text left -->
+  <div class="char-row right">
+    <div class="char-card">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Yuri">
+        <div class="w3-container">
+          <h3>Yuri</h3>
+          <p class="w3-opacity">Member</p>
+        </div>
+      </div>
+    </div>
+    <div class="char-text">
+      <h3>Yuri</h3>
+      <p>
+        Yuri là hình mẫu thu nhỏ của một mọt sách trầm tính và hướng nội. Với mái tóc tím dài thanh lịch và thân hình trưởng thành, cô mang một phong thái điềm tĩnh, thông minh và dè dặt . Cô là một dandere, thường chìm đắm trong suy nghĩ và tìm thấy niềm an ủi trong những cuốn tiểu thuyết tâm lý đen tối mà cô yêu thích . Niềm đam mê văn học của cô chỉ ngang bằng với sự chuẩn bị tỉ mỉ trà cho các thành viên trong câu lạc bộ.
+      </p>
+    </div>
+  </div>
+
+  <!-- Natsuki — card left, text right -->
+  <div class="char-row left">
+    <div class="char-card">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Natsuki">
+        <div class="w3-container">
+          <h3>Natsuki</h3>
+          <p class="w3-opacity">Member</p>
+        </div>
+      </div>
+    </div>
+    <div class="char-text">
+      <h3>Natsuki</h3>
+      <p>
+        Thành viên nhỏ nhất của câu lạc bộ, Natsuki, thường bị nhầm là học sinh nhỏ tuổi hơn. Với mái tóc ngắn màu hồng nhạt buộc hai bên và thân hình nhỏ nhắn, cô thể hiện một tính cách tsundere cứng rắn, thường cáu kỉnh và thô lỗ để che giấu nội tâm yếu đuối và ngọt ngào hơn . Đam mê lớn của Natsuki là nướng những chiếc bánh cupcake thơm ngon và bộ sưu tập anime và manga quý giá, thứ cô thường giấu trong phòng câu lạc bộ vì sợ bị đánh giá.
+      </p>
+    </div>
+  </div>
+
+  <!-- Monika — card right, text left -->
+  <div class="char-row right">
+    <div class="char-card">
+      <div class="w3-card">
+        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Monika">
+        <div class="w3-container">
+          <h3>Monika</h3>
+          <p class="w3-opacity">President</p>
+        </div>
+      </div>
+    </div>
+    <div class="char-text">
+      <h3>Monika</h3>
+      <p>
+        Chủ tịch Câu lạc bộ Văn học là Monika, một cô gái xinh đẹp, tài năng và dường như hoàn hảo . Khác với các thành viên khác, cô có tên phương Tây, ám chỉ bản chất độc nhất vô nhị của mình . Cô đóng vai trò như một người hướng dẫn thân thiện, luôn sẵn sàng   ưa ra lời khuyên và giúp người chơi kết nối với các cô gái khác. Cô ấy thông minh, khỏe mạnh và dường như là thành viên hòa nhập tốt nhất của nhóm.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Promo Section - "Games" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="game">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>For our readers, we have imported DDLC into our webs</h3>
+      <p><a href="ddlc.html" target="_blank" rel="noopener noreferrer" class="w3-button w3-black"><i class="fa fa-th"> </i> Try DDLC</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="image/screenshot.png" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
 
 <!-- Dev -->
-<div class="w3-container" style="padding:128px 16px" id="team">
+<div class="w3-container" style="padding:128px 16px" id="dev">
   <h3 class="w3-center">TEAM SALVATOS</h3>
 
   <!-- Dan Salvato - ô riêng ở trên -->
@@ -122,184 +279,86 @@
           <h3>Dan Salvato</h3>
           <p class="w3-opacity">Studio Director</p>
           <div style="display:flex; gap:10px; justify-content:center; padding:10px 0;">
-            <a href="#"><img src="image/twitch-logo.svg" alt="Twitch" style="width:32px; height:32px;"></a>
-            <a href="#"><img src="image/bluesky-logo.svg" alt="Bluesky" style="width:32px; height:32px;"></a>
-            <a href="#"><img src="image/mastodon-logo.svg" alt="Mastodon" style="width:32px; height:32px;"></a>
-            <a href="#"><img src="image/youtube-logo.svg" alt="YouTube" style="width:32px; height:32px;"></a>
-            <a href="#"><img src="image/mail.svg" alt="Mail" style="width:32px; height:32px;"></a>
+            <a target="_blank" rel="noopener" href="https://twitch.tv/dansalvato"><img src="image/twitch-logo.svg" alt="Twitch" style="width:32px; height:32px;"></a>
+            <a target="_blank" rel="noopener" href="https://bsky.app/profile/dansalva.to"><img src="image/bluesky-logo.svg" alt="Bluesky" style="width:32px; height:32px;"></a>
+            <a target="_blank" rel="noopener" href="https://mastodon.gamedev.place/@dansalvato"><img src="image/mastodon-logo.svg" alt="Mastodon" style="width:32px; height:32px;"></a>
+            <a target="_blank" rel="noopener" href="https://youtube.com/dansalvato"><img src="image/youtube-logo.svg" alt="YouTube" style="width:32px; height:32px;"></a>
+            <a href="mailto:dan@teamsalvato.com"><img src="image/mail.svg" alt="Mail" style="width:32px; height:32px;"></a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 4 thành viên còn lại -->
+  <!-- 4 thành viên bên dưới -->
   <div class="w3-row-padding w3-grayscale" style="margin-top:32px">
+
+    <!-- John Doe -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <h3>Alecia Bardachino</h3>
+          <p class="w3-opacity">Executive Director</p>
+          <div style="display:flex; gap:10px; justify-content:center; padding:10px 0;">
+            <a target="_blank" rel="noopener" href="https://twitter.com/reusableeyebags"><img src="image/twitter-logo.svg" alt="Twitter" style="width:32px; height:32px;"></a>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Anja Doe -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Anja Doe</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <h3>Steevin Love</h3>
+          <p class="w3-opacity">Senior Visual Designer</p>
+          <div style="display:flex; gap:10px; justify-content:center; padding:10px 0;">
+            <a target="_blank" rel="noopener" href="https://twitter.com/steevinlove"><img src="image/twitter-logo.svg" alt="Twitter" style="width:32px; height:32px;"></a>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Mike Ross -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%">
         <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <h3>Joseph Boyd</h3>
+          <p class="w3-opacity">Developer, Community Manager</p>
+          <div style="display:flex; gap:10px; justify-content:center; padding:10px 0;">
+            <a target="_blank" rel="noopener" href="https://twitter.com/Mithost"><img src="image/twitter-logo.svg" alt="Twitter" style="width:32px; height:32px;"></a>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Dan Star -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
         <div class="w3-container">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Designer</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <h3>Meg Tsuruda</h3>
+          <p class="w3-opacity">Brand Manager</p>
+          <div style="display:flex; gap:10px; justify-content:center; padding:10px 0;">
+            <a target="_blank" rel="noopener" href="https://twitter.com/MegwaLove"><img src="image/twitter-logo.svg" alt="Twitter" style="width:32px; height:32px;"></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- Promo Section - "Games" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>For our readers, we have imported DDLC into our webs</h3>
-      <p>™<br>:)))))</p>
-      <p><a href="ddlc.html" target="_blank" rel="noopener noreferrer" class="w3-button w3-black"><i class="fa fa-th"> </i> Try DDLC</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
   </div>
 </div>
 
 
 
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">0</span>
-    <br>Partners
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">0</span>
-    <br>Projects Done
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">0</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">0</span>
-    <br>Meetings
-  </div>
-</div>
-
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Doesnt exist xd</p>
-      <p>Quack</p>
-    </div>
-    
-    </div>
-  </div>
-</div>
-
-
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Lên đầu</a>
+</footer>
  
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
 
 </body>
 </html>
