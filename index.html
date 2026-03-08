@@ -39,39 +39,41 @@
     </a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#characters" class="w3-bar-item w3-button"><i class="fa fa-th"></i> CHARACTERS</a>
-      <a href="#dev" class="w3-bar-item w3-button"><i class="fa fa-user"></i> DEVELOPER</a>
+      <a href="#about" class="w3-bar-item w3-button">Giới thiệu</a>
+      <a href="#characters" class="w3-bar-item w3-button">Nhân vật</a>
+      <a href="#dev" class="w3-bar-item w3-button">Nhà phát triển</a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="sb_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
+  
 
-    
 
-<!-- cái thanh ở bên khi thu nhỏ -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#characters" onclick="w3_close()" class="w3-bar-item w3-button">CHARACTERS</a>
-  <a href="#dev" onclick="w3_close()" class="w3-bar-item w3-button">DEVELOPER</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Giới thiệu</a>
+  <a href="#characters" onclick="w3_close()" class="w3-bar-item w3-button">Nhân vật</a>
+  <a href="#dev" onclick="w3_close()" class="w3-bar-item w3-button">Nhà phát triển</a>
 </nav>
 
-<!-- chữ trên ảnh -->
+
+
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Doki Doki Literature Club</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Doki Doki Literature Club</span><br>
-    <span class="w3-large">Visual Novel created by Team Salvato</span>
-    <p><a href="#game" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Try out Today</a></p>
+    <span class="w3-large">Visual Novel được làm bởi Team Salvato</span>
+    <p><a href="#game" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Chơi thử</a></p>
   </div> 
 </header>
 
-<!-- giới thiệu game -->
+
+
 <div class="w3-container" style="
   padding: 128px 16px;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/banner_brown.png');
@@ -111,7 +113,8 @@
   </div>
 </div>
 
-<!-- nhân vật -->
+
+
 <div class="w3-container" style="padding:128px 16px" id="characters">
   <h3 class="w3-center">Nhân vật chính</h3>
 
@@ -145,17 +148,20 @@
       min-width: 250px;
     }
 
-    /* Text luôn căn trái, thêm padding để cách ô nhân vật */
+
+
     .char-row.left .char-text {
       text-align: left;
       padding-left: 32px;
     }
     .char-row.right .char-text {
-      text-align: left;
-      padding-right: 32px;
-    }
+    text-align: left;
+    padding-left: 48px;
+    padding-right: 32px;
+}
 
-    /* Responsive: on small screens, stack vertically */
+
+
     @media (max-width: 700px) {
       .char-row.left,
       .char-row.right {
@@ -167,9 +173,9 @@
         max-width: 90%;
       }
       .char-text {
-        text-align: center !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
       }
     }
@@ -179,10 +185,10 @@
   <div class="char-row left">
     <div class="char-card">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Sayori">
+        <img src="image/sayori.jpg" alt="Sayori">
         <div class="w3-container">
           <h3>Sayori</h3>
-          <p class="w3-opacity">Vice President</p>
+          <p class="w3-opacity">Phó Chủ tịch</p>
         </div>
       </div>
     </div>
@@ -198,10 +204,10 @@
   <div class="char-row right">
     <div class="char-card">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Yuri">
+        <img src="image/yuri.jpg" alt="Yuri">
         <div class="w3-container">
           <h3>Yuri</h3>
-          <p class="w3-opacity">Member</p>
+          <p class="w3-opacity">Thành viên</p>
         </div>
       </div>
     </div>
@@ -217,10 +223,10 @@
   <div class="char-row left">
     <div class="char-card">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Natsuki">
+        <img src="image/natsuki.jpg" alt="Natsuki">
         <div class="w3-container">
           <h3>Natsuki</h3>
-          <p class="w3-opacity">Member</p>
+          <p class="w3-opacity">Thành viên</p>
         </div>
       </div>
     </div>
@@ -236,10 +242,10 @@
   <div class="char-row right">
     <div class="char-card">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Monika">
+        <img src="image/monika.jpg" alt="Monika">
         <div class="w3-container">
           <h3>Monika</h3>
-          <p class="w3-opacity">President</p>
+          <p class="w3-opacity">Chủ tịch</p>
         </div>
       </div>
     </div>
@@ -253,12 +259,13 @@
 
 </div>
 
-<!-- Promo Section - "Games" -->
+
+
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="game">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>For our readers, we have imported DDLC into our webs</h3>
-      <p><a href="ddlc.html" target="_blank" rel="noopener noreferrer" class="w3-button w3-black"><i class="fa fa-th"> </i> Try DDLC</a></p>
+      <h3>Nếu các bạn có hứng thú với game thì có thể thử ở ngay trên website của chúng tôi</h3>
+      <p><a href="ddlc.html" target="_blank" rel="noopener noreferrer" class="w3-button w3-black"> Bấm đây để chơi</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="image/screenshot.png" alt="Buildings" width="700" height="394">
@@ -266,15 +273,14 @@
   </div>
 </div>
 
-<!-- Dev -->
+
+
 <div class="w3-container" style="padding:128px 16px" id="dev">
   <h3 class="w3-center">TEAM SALVATOS</h3>
-
-  <!-- Dan Salvato - ô riêng ở trên -->
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom" style="margin:0 auto; float:none">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Dan Salvato" style="width:100%">
+        <img src="image/dan-salvato.svg" alt="Dan Salvato" style="width:100%">
         <div class="w3-container">
           <h3>Dan Salvato</h3>
           <p class="w3-opacity">Studio Director</p>
@@ -290,13 +296,12 @@
     </div>
   </div>
 
-  <!-- 4 thành viên bên dưới -->
-  <div class="w3-row-padding w3-grayscale" style="margin-top:32px">
 
-    <!-- John Doe -->
+
+  <div class="w3-row-padding w3-grayscale" style="margin-top:32px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
+        <img src="image/alecia-bardachino.svg" alt="Alecia Bardachino" style="width:100%">
         <div class="w3-container">
           <h3>Alecia Bardachino</h3>
           <p class="w3-opacity">Executive Director</p>
@@ -307,10 +312,9 @@
       </div>
     </div>
 
-    <!-- Anja Doe -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <img src="image/steevin-love.svg" alt="Steevin Love" style="width:100%">
         <div class="w3-container">
           <h3>Steevin Love</h3>
           <p class="w3-opacity">Senior Visual Designer</p>
@@ -321,10 +325,9 @@
       </div>
     </div>
 
-    <!-- Mike Ross -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <img src="image/joseph-boyd.svg" alt="Joseph Boyd" style="width:100%">
         <div class="w3-container">
           <h3>Joseph Boyd</h3>
           <p class="w3-opacity">Developer, Community Manager</p>
@@ -335,10 +338,9 @@
       </div>
     </div>
 
-    <!-- Dan Star -->
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="https://www.w3schools.com/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <img src="image/meg-tsuruda.svg" alt="Meg Tsuruda" style="width:100%">
         <div class="w3-container">
           <h3>Meg Tsuruda</h3>
           <p class="w3-opacity">Brand Manager</p>
@@ -348,17 +350,38 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
 
 
-<!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Lên đầu</a>
 </footer>
  
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
+
+var mySidebar = document.getElementById("mySidebar");
+
+function sb_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+function sb_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 </body>
 </html>
